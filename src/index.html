@@ -1,13 +1,76 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zxx">
+
 <head>
-  <meta charset="utf-8">
-  <title>EndGameAngularWebApp</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>EndGam - Gaming Magazine</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="EndGam Gaming Magazine">
+  <meta name="keywords" content="endGame, gGaming, magazine, html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link href="./assets/img/favicon.ico" rel="shortcut icon" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Stylesheets
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="SlickNav/dist/slicknav.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/magnific-popup.css"/>
+	<link rel="stylesheet" href="css/animate.css"/> -->
+
+  <!-- Main Stylesheets
+	<link rel="stylesheet" href="css/style.css"/> -->
+
 </head>
+
 <body>
+  <!-- Page Preloder
+  <div id="preloder">
+    <div class="loader"></div>
+  </div> -->
+
+  <!-- Header section -->
+  <header class="header-section">
+    <div class="header-warp">
+      <div class="header-social d-flex justify-content-end">
+        <p>Follow us:</p>
+        <a href="#"><i class="fa fa-pinterest"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-dribbble"></i></a>
+        <a href="#"><i class="fa fa-behance"></i></a>
+      </div>
+      <div class="header-bar-warp d-flex">
+        <!-- site logo -->
+        <a href="home.html" class="site-logo">
+          <img src=".assets/img/logo.png" alt="">
+        </a>
+        <nav class="top-nav-area w-100">
+          <div class="user-panel">
+            <a href="/login" routerLink="/login">Login</a> / <a href="/register" routerLink="/register">Register</a>
+          </div>
+          <!-- Menu -->
+          <ul class="main-menu primary-menu">
+            <li><a href="/" routerLink="/">Home</a></li>
+            <li><a href="/games-list" routerLink="/games-list">Games</a>
+              <ul class="sub-menu">
+                <li><a href="game-single.html">Game Singel</a></li>
+              </ul>
+            </li>
+            <li><a href="/" routerLink="/">Reviews</a></li>
+            <li><a href="/contact" routerLink="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- Header section end -->
+
   <app-root></app-root>
 </body>
+
 </html>
