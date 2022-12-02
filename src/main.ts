@@ -5,7 +5,7 @@ import { AppModule } from './app/app.module';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, ref, set, update, onValue, DatabaseReference } from "firebase/database";
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
@@ -30,12 +30,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-function writeUserData(userId: string, name: string, email: string, password: string)
-{
+function writeUserData(userId: string, name: string, email: string, password: string) {
   const db = getDatabase();
   const reference = ref(db, 'users/' + userId);
 
-  set(reference, 
+  set(reference,
     {
       username: name,
       email: email,
@@ -43,4 +42,36 @@ function writeUserData(userId: string, name: string, email: string, password: st
     });
 }
 
-writeUserData("MikuId", "Miki", "Miki2000@gmail.com", "123456789")
+// writeUserData("MikuId", "Miki", "Miki2000@gmail.com", "password123")
+
+function readUser(userId: string){
+  const db = getDatabase();
+  const reference = ref(db, 'users/' + userId);
+  onValue(reference, (snapshot) => {
+    return snapshot.val();
+  });
+}
+
+console.log(readUser("MikuId"));
+
+
+(function($) {
+	/*------------------
+		Navigation
+	--------------------*/
+	// $('.primary-menu').slicknav({
+	// 	appendTo:'.header-warp',
+	// 	closedSymbol: '<i class="fa fa-angle-down"></i>',
+	// 	openedSymbol: '<i class="fa fa-angle-up"></i>'
+	// });
+
+	var dot = $('.hero-slider .owl-dot');
+	dot.each(function() {
+		var index = $(this).index() + 1;
+		if(index < 10){
+			$(this).html('0').append(index + '.');
+		}else{
+			$(this).html(index + '.');
+		}
+	});
+})(jQuery);
