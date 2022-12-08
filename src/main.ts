@@ -53,25 +53,3 @@ function readUser(userId: string){
 }
 
 console.log(readUser("MikuId"));
-
-
-(function($) {
-	/*------------------
-		Navigation
-	--------------------*/
-	// $('.primary-menu').slicknav({
-	// 	appendTo:'.header-warp',
-	// 	closedSymbol: '<i class="fa fa-angle-down"></i>',
-	// 	openedSymbol: '<i class="fa fa-angle-up"></i>'
-	// });
-
-	var dot = $('.hero-slider .owl-dot');
-	dot.each(function() {
-		var index = $(this).index() + 1;
-		if(index < 10){
-			$(this).html('0').append(index + '.');
-		}else{
-			$(this).html(index + '.');
-		}
-	});
-})(jQuery);
