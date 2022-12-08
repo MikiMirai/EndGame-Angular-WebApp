@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-register',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
-
+  handleFormSubmit(value: {username: string; email: string; password: string;}): void{
+    console.log(value);
+  }
 }
