@@ -97,6 +97,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "EndGame-Angular-WebApp:build:production",
+            "firebaseProject": "endgame-51294",
+            "firebaseHostingSite": "endgame-51294"
+          }
         }
       }
     }

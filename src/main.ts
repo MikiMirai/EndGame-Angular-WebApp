@@ -1,4 +1,5 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { environment } from './environments/environment';
 
 import { AppModule } from './app/app.module';
 
@@ -13,21 +14,8 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyCljOLKaWhXIVNje79uHylNV7607jtTgXg",
-  authDomain: "endgame-51294.firebaseapp.com",
-  databaseURL: "https://endgame-51294-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "endgame-51294",
-  storageBucket: "endgame-51294.appspot.com",
-  messagingSenderId: "111538745375",
-  appId: "1:111538745375:web:79356170937be0414ea52a",
-  measurementId: "G-8D5F3FLR8S"
-};
-
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(environment.firebase);
 const analytics = getAnalytics(app);
 
 function writeUserData(userId: string, name: string, email: string, password: string) {
@@ -44,7 +32,7 @@ function writeUserData(userId: string, name: string, email: string, password: st
 
 // writeUserData("MikuId", "Miki", "Miki2000@gmail.com", "password123")
 
-function readUser(userId: string){
+function readUser(userId: string) {
   const db = getDatabase();
   const reference = ref(db, 'users/' + userId);
   onValue(reference, (snapshot) => {
