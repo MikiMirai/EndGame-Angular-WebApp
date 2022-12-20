@@ -1,0 +1,47 @@
+<header class="header-section">
+  <div class="header-warp">
+    <div class="header-social d-flex justify-content-end">
+      <p>Follow us:</p>
+      <a href="#"><i class="fa fa-pinterest"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-dribbble"></i></a>
+      <a href="#"><i class="fa fa-behance"></i></a>
+    </div>
+    <div class="header-bar-warp d-flex">
+      
+      <a href="/" routerLink="/" class="site-logo">
+        <img src="../../../assets/img/logo.png" alt="">
+      </a>
+      <nav class="top-nav-area w-100">
+
+        <ng-template #loggedOutTemplate>
+          <div class="user-panel">
+            <a href="/auth/login" routerLink="/auth/login">Login</a> / 
+            <a href="/auth/register" routerLink="/auth/register">Register</a>
+          </div>
+        </ng-template>
+
+        <ng-template #loggedInTemplate>
+          <div class="user">
+              <div class="user-panel">
+                <a href="/game/new" routerLink="/game/new">New Game</a> / 
+                <a href="/dashboard" routerLink="/dashboard">Dashboard</a> / 
+                <a routerLink="/auth/logout">Log Out</a>
+              </div>
+          </div>
+        </ng-template>
+
+        <ng-container *ngTemplateOutlet="isLoggedIn ? loggedInTemplate : loggedOutTemplate"></ng-container>
+        
+        <ul class="main-menu primary-menu">
+          <li><a href="/" routerLink="/">Home</a></li>
+          <li *ngIf="isLoggedIn">
+            <a href="/games" routerLink="/games">Games</a>
+          </li>
+          <li><a href="/contact" routerLink="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
