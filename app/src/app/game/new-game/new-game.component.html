@@ -1,6 +1,7 @@
-<section id="create">
-  <div class="form">
+<section id="create" class="create-page">
+  <div class="container-create">
     <h2>Create a Game</h2>
+
     <form #form="ngForm" (ngSubmit)="newGameHandler(form)" class="create-form">
 
       <!-- title, imageUrl, description, genres, price, rating -->
@@ -73,7 +74,7 @@
         </p>
       </ng-container>
 
-      <button class="public" [disabled]="form.invalid">Create</button>
+      <button class="site-btn" [disabled]="form.invalid">Create</button>
 
     </form>
   </div>
