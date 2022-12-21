@@ -16,7 +16,7 @@ export class HomeComponent {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.getGamesRecent().subscribe({
+    this.apiService.getGames().subscribe({
       next: (value) => {
         this.gameListRecent = value.reverse().slice(0, 3);
       },
@@ -26,7 +26,7 @@ export class HomeComponent {
       }
     });
 
-    this.apiService.getGamesRecent().subscribe({
+    this.apiService.getGames().subscribe({
       next: (value) => {
         this.gameListTrending = value.sort((a, b) => +b.rating - +a.rating).slice(0, 3);
       },

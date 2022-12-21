@@ -12,6 +12,12 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
+  getGames() {
+    let url = '/api/games/';
+    url += '?limit=3';
+    return this.httpClient.get<IGame[]>(url);
+  }
+
   loadGames() {
     return this.httpClient.get<IGame[]>(`${apiURL}/games`);
   }

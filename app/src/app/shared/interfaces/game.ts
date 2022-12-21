@@ -8,7 +8,7 @@ export interface IGame {
   imageUrl: string;
   _ownerId: IUser;
   description: string;
-  score: string;
+  rating: string;
   genres: string;
   price: string;
   created_on: string;
