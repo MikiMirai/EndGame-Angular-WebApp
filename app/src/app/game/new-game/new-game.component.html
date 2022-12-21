@@ -1,0 +1,80 @@
+<section id="create">
+  <div class="form">
+    <h2>Create a Game</h2>
+    <form #form="ngForm" (ngSubmit)="newGameHandler(form)" class="create-form">
+
+      <!-- title, imageUrl, description, genres, price, rating -->
+      <input type="text" name="title" #nameInput="ngModel" ngModel required [minlength]="4" id="game-title"
+        placeholder="Title">
+
+      <ng-container *ngIf="nameInput.touched">
+        <p class="error" *ngIf="nameInput.errors?.['required']">
+          Game name is required.
+        </p>
+        <p class="error" *ngIf="nameInput.errors?.['minlength']">
+          Game name must be at least {{nameInput.errors?.['minlength']['requiredLength']}} characters long.
+        </p>
+      </ng-container>
+
+      <input type="text" name="imageUrl" #nameInput="ngModel" ngModel required [minlength]="6" id="game-logo"
+        placeholder="ImageURL">
+
+      <ng-container *ngIf="nameInput.touched">
+        <p class="error" *ngIf="nameInput.errors?.['required']">
+          ImageURL is required.
+        </p>
+        <p class="error" *ngIf="nameInput.errors?.['minlength']">
+          ImageURL must be at least {{nameInput.errors?.['minlength']['requiredLength']}} characters long.
+        </p>
+      </ng-container>
+
+      <textarea type="text" #textInput="ngModel" ngModel required [minlength]="6" name="description"
+        id="game-description" placeholder="Description"></textarea>
+      <ng-container *ngIf="textInput.touched">
+        <p class="error" *ngIf="textInput.errors?.['required']">
+          Description for the Game is required.
+        </p>
+        <p class="error" *ngIf="textInput.errors?.['minlength']">
+          Description field must be at least {{textInput.errors?.['minlength']['requiredLength']}} characters long.
+        </p>
+      </ng-container>
+
+      <input type="text" name="genres" #nameInput="ngModel" ngModel required [minlength]="2" id="game-genres"
+        placeholder="Genres">
+      <ng-container *ngIf="nameInput.touched">
+        <p class="error" *ngIf="nameInput.errors?.['required']">
+          Genres is required.
+        </p>
+        <p class="error" *ngIf="nameInput.errors?.['minlength']">
+          Genres must be at least {{nameInput.errors?.['minlength']['requiredLength']}} characters long.
+        </p>
+      </ng-container>
+
+      <textarea type="text" #textInput="ngModel" ngModel required [minlength]="1" name="price" id="game-price"
+        placeholder="Price"></textarea>
+      <ng-container *ngIf="textInput.touched">
+        <p class="error" *ngIf="textInput.errors?.['required']">
+          Price for the Game is required.
+        </p>
+        <p class="error" *ngIf="textInput.errors?.['minlength']">
+          Price field must be at least {{textInput.errors?.['minlength']['requiredLength']}} characters long.
+        </p>
+      </ng-container>
+
+
+      <input type="text" name="rating" #nameInput="ngModel" ngModel required [minlength]="1" id="game-rating"
+        placeholder="Rating">
+      <ng-container *ngIf="nameInput.touched">
+        <p class="error" *ngIf="nameInput.errors?.['required']">
+          Rating is required.
+        </p>
+        <p class="error" *ngIf="nameInput.errors?.['minlength']">
+          Rating must be at least {{nameInput.errors?.['minlength']['requiredLength']}} characters long.
+        </p>
+      </ng-container>
+
+      <button class="public" [disabled]="form.invalid">Create</button>
+
+    </form>
+  </div>
+</section>

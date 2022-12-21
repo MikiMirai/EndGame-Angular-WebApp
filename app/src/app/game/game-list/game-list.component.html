@@ -1,0 +1,27 @@
+<section class="games-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-7 col-lg-8 col-md-7">
+                <ul class="row">
+                    <li class="col-lg-4 col-md-6" *ngFor="let game of gameList; let i = index">
+                        <div class="game-item">
+                            <img src="{{game.imageUrl}}" alt="#">
+                            <h5>{{game.title}}</h5>
+                            <p class="rating">Rating: {{game.rating}}</p>
+                            <a href="game-single.html" class="read-more">Read More <img
+                                    src="./assets/img/icons/double-arrow.png" alt="#" /></a>
+                        </div>
+                    </li>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="game-item">
+                            <img src="./assets/img/games/2.jpg" alt="#">
+                            <h5>Dooms Day TEST</h5>
+                            <a href="game-single.html" class="read-more">Read More <img
+                                    src="./assets/img/icons/double-arrow.png" alt="#" /></a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
