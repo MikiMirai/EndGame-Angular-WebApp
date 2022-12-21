@@ -1,0 +1,48 @@
+#dashboard {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: block;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 40px;
+  }
+  
+  .your-games{
+    margin-bottom: 40px;
+  }
+
+  .game img {
+    height: 170px;
+    width: 170px;
+  }
+  
+  .title,
+  .salary {
+    font-size: 21px;
+  }
+  
+  .details-btn {
+    text-decoration: none;
+    margin: auto 50px;
+    font-size: 21px;
+    width: 130px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background: #5c9596;
+  }
+
+  table{
+    list-style: none;
+    width: 80%;
+    margin-left: 14%;
+  }
+
+  img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 150px;
+    max-height: 150px;
+  }

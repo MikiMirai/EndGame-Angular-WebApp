@@ -1,0 +1,48 @@
+<section id="dashboard">
+  <div class="row">
+    <div class="col-12">
+      <div class="text-white">
+        <section class="your-games">
+          <h2 *ngIf="!isEmpty">Your Games</h2>
+          <h2 *ngIf="isEmpty">You don't have games yet!</h2>
+        </section>
+
+        <div class="p-0">
+          <table class="text-white text-nowrap" cellpadding="0" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Genres</th>
+                <th>Rating</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let game of gameList; let i = index" class="game">
+                <td>
+                  <img src={{game.imageUrl}} alt="game-image">
+                </td>
+                <td>
+                  {{game.title}}
+                </td>
+                <td>
+                  {{game.genres}}
+                </td>
+                <td>
+                  {{game.rating}}
+                </td>
+                <td>
+                  {{game.price}}
+                </td>
+                <td>
+                  <a class="details-btn" routerLink="/game/detail/{{game._id}}">Details</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
