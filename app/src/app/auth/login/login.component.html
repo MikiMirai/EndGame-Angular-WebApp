@@ -1,10 +1,11 @@
-<section id="login">
-  <div class="form">
+<section id="login" class="login-page">
+  <div class="container-login">
     <h2>Login</h2>
+
     <form #form="ngForm" class="login-form" (ngSubmit)="loginHandler(form)">
 
       <input #emailInput="ngModel" class="input-error" ngModel required type="text" name="email" id="email"
-        placeholder="abv@gmail.com">
+        placeholder="abv@gmail.com" class="transparent">
 
       <ng-container *ngIf="emailInput.touched">
         <p class="error" *ngIf="emailInput.errors?.['required']">
@@ -17,7 +18,7 @@
 
       <p class="field field-icon">
         <input type="password" ngModel #passwordInput="ngModel" name="password" id="password" placeholder="******"
-          required [minlength]="5">
+          required [minlength]="5" class="transparent">
       </p>
       <ng-container *ngIf="passwordInput.touched">
         <p class="error" *ngIf="passwordInput.errors?.['required']">
@@ -28,10 +29,10 @@
         </p>
       </ng-container>
 
-      <button [disabled]="form.invalid">Login</button>
+      <button [disabled]="form.invalid" class="site-btn">Login</button>
 
       <p class="message">
-        Have an account?
+        Don't have an account?
         <a href="/auth/register" routerLink="/auth/register">Register</a>
       </p>
 
