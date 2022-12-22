@@ -1,31 +1,27 @@
-h2 {
-  margin-bottom: 50px;
-  margin-left: 33%;
-  font-size: 30px;
-  color: white;
+.error {
+	color: red
 }
 
-.container-create{
-  max-width: 25%;
-  margin-left: 38%;
+h2 {
+	margin-bottom: 50px;
+	margin-left: 33%;
+	font-size: 30px;
+	color: white;
+}
+
+.container-create {
+	max-width: 25%;
+	margin-left: 38%;
 }
 
 .create-page {
-  padding: 4% 0 4%;
-  margin: auto;
+	padding: 4% 0 4%;
+	margin: auto;
 }
 
-.site-btn{
-  margin-top: 8%;
-  margin-left: 33%;
-}
-
-/* ----------------
-  Create
----------------------*/
-
-.error{
-  color: red
+.site-btn {
+	margin-top: 8%;
+	margin-left: 33%;
 }
 
 .create-form input,

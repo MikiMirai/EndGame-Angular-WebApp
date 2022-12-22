@@ -1,7 +1,3 @@
-/* ----------------
- Blog Section
----------------------*/
-
 .blog-section {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#501755+0,2d1854+100 */
 	background: #501755;
@@ -79,7 +75,6 @@
 	text-transform: uppercase;
 	font-weight: 700;
 	font-style: italic;
-	padding-left: 38px;
 	margin-bottom: 48px;
 }
 
@@ -116,74 +111,16 @@
 	line-height: 1.5;
 }
 
-.categories-widget {
-	background: #34164b;
-	padding: 55px 0 25px;
-}
-
-.categories-widget ul {
-	list-style: none;
-	padding: 0 38px;
-}
-
-.categories-widget ul li {
-	display: block;
-}
-
-.categories-widget ul li a {
-	display: inline-block;
-	position: relative;
-	font-size: 16px;
-	color: #68647d;
-	font-weight: 500;
-	margin-bottom: 15px;
-	padding-right: 19px;
-	-webkit-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	transition: all 0.2s;
-	background-image: url("../../../assets/img/icons/double-arrow.png");
-	background-repeat: no-repeat;
-	background-position: right -120% center;
-	background-size: 11px;
-}
-
-.categories-widget ul li a:hover {
-	color: #b01ba5;
-	background-position: right center;
-}
-
-.latest-comments .lc-item {
-	margin-bottom: 30px;
-}
-
-.latest-comments .lc-item:last-child {
-	margin-bottom: 0;
-}
-
-.latest-comments .lc-item .lc-avatar {
-	width: 64px;
-	height: 64px;
-	border-radius: 50%;
-	float: left;
-	margin-right: 12px;
-}
-
-.latest-comments .lc-item .tw-text {
-	padding-top: 10px;
-	font-size: 16px;
-	color: #fff;
-	font-weight: 500;
-}
-
-.latest-comments .lc-item .tw-text a {
-	color: #b01ba5;
-}
-
-.latest-comments .lc-item .tw-text span {
-	color: #68647d;
-}
-
 .col{
 	display: flex;
 	flex-direction: column;
+}
+
+.price {
+	max-width: 25%;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 3px 16px;
+    margin-bottom: 25px;
+    background: #bd10dd;
 }
