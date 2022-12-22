@@ -23,9 +23,10 @@ Gaming site where people can add their own games.
 - ! Install NodeJS from their site.
 - Clone the repo, preferably with VS Code
 - Open a terminal and type 'cd app' then 'npm i'
-- Then repeat with 'cd rest-api' then 'npm i' again in here
+- Then open another one and do 'cd rest-api' then 'npm i' again in here
 
 ## Start Project
+- Open 2 terminals
 - 'cd app' then 'ng s' and
 - 'cd rest-api' then 'node index.js'
 - Open http://localhost:4200/ in your browser.
