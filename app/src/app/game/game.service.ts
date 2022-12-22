@@ -24,6 +24,10 @@ export class GameService {
   //title, imageUrl, description, genres, price, rating
 
   createGame(title: string, imageUrl: string, description: string, genres: string, price: string, rating: string) {
-    return this.http.post<IGame>('/api/games/', {title, imageUrl, description, genres, price, rating });
+    return this.http.post<IGame>('/api/games/', { title, imageUrl, description, genres, price, rating });
+  }
+
+  deleteGame(id: string | undefined) {
+    return this.http.delete<any>(`/api/games/${id}`)
   }
 }

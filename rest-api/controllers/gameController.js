@@ -29,8 +29,24 @@ function createGame(req, res, next) {
         .catch(next);
 }
 
+function deleteGame(req, res, next) {
+    const { gameId } = req.params;
+    
+    gameModel.findOneAndDelete({ _id: gameId })
+    .then(deletedGame => {
+        if (deletedGame) {
+            res.status(200).json(deletedGame);
+        }
+        else {
+            res.status(401).json({ message: `Not allowed!` });
+        }
+    })
+    .catch(next);
+}
+
 module.exports = {
     getGames,
     createGame,
-    getGame
+    getGame,
+    deleteGame
 }

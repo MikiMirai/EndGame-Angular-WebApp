@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     GameListComponent,
     NewGameComponent,
-    GameDetailComponent
+    GameDetailComponent,
   ],
   imports: [
     CommonModule,

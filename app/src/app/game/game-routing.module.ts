@@ -20,7 +20,7 @@ const routes: Routes = [
       game: GameResolver
     },
     component: GameDetailComponent
-  }
+  },
 ];
 
 export const GameRoutingModule = RouterModule.forChild(routes);
