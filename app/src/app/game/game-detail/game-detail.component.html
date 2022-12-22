@@ -13,13 +13,9 @@
 <!-- Games section -->
 <section class="games-single-page">
     <div class="container">
-        <div class="game-single-preview">
-            <img src="{{game.imageUrl}}" alt="" style="max-width: 400px;">
-        </div>
         <div class="row">
-            <div class="col-xl-9 col-lg-8 col-md-7 game-single-content">
-                <h4>Description</h4>
-                <p>{{game.description}}</p>
+            <div class="col-xl-9 col-lg-8 col-md-7 game-single-preview">
+                <img src="{{game.imageUrl}}" alt="" style="max-width: 400px;">
             </div>
             <div class="col-xl-3 col-lg-4 col-md-5 sidebar game-page-sideber">
                 <div id="stickySidebar">
@@ -41,6 +37,15 @@
                     </div>
                 </div>
             </div>
+            
+        </div>
+
+        <div class="row">
+            <div class=" game-single-content">
+                <h4>Description</h4>
+                <p>{{game.description}}</p>
+            </div>
+
         </div>
     </div>
 </section>

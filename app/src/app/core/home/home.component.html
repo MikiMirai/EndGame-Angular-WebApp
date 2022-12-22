@@ -24,9 +24,9 @@
 							<img src="{{game.imageUrl}}" alt="">
 						</div>
 						<div class="blog-text text-box text-white">
-							<div class="top-meta">Rating: {{game.rating}}</div>
 							<h3>{{game.title}}</h3>
 							<p>{{game.description}}</p>
+							<div class="top-meta">Rating: {{game.rating}} / 10</div>
 							<div class="price">Price: {{game.price}}</div>
 							<a href="" routerLink="/game/detail/{{game._id}}" class="read-more">Read More <img
 									src="../../../assets/img/icons/double-arrow.png" alt="#" /></a>
@@ -51,6 +51,7 @@
 						</div>
 					</div>
 					<div class="widget-item">
+						<h4 class="widget-title">Game of the Day</h4>
 						<a href="https://store.steampowered.com/app/526870/Satisfactory/" class="add">
 							<img src="./../../../assets/img/games/stf-update.jpg" alt="">
 						</a>
