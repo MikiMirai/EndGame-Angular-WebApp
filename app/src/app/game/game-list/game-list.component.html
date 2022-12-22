@@ -1,3 +1,15 @@
+<!-- Page top section -->
+<section class="page-top-section">
+    <div class="page-info">
+        <h2>Games List</h2>
+        <div class="site-breadcrumb">
+            <a href="/" routerLink="/">Home</a> /
+            <span>Games List</span>
+        </div>
+    </div>
+</section>
+<!-- Page top end-->
+
 <section class="games-section">
     <div class="container">
         <div class="row">
@@ -8,18 +20,10 @@
                             <img src="{{game.imageUrl}}" alt="#">
                             <h5>{{game.title}}</h5>
                             <p class="rating">Rating: {{game.rating}}</p>
-                            <a href="game-single.html" class="read-more">Read More <img
+                            <a routerLink="/game/detail/{{game._id}}" class="read-more">Read More <img
                                     src="./assets/img/icons/double-arrow.png" alt="#" /></a>
                         </div>
                     </li>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="game-item">
-                            <img src="./assets/img/games/2.jpg" alt="#">
-                            <h5>Dooms Day TEST</h5>
-                            <a href="game-single.html" class="read-more">Read More <img
-                                    src="./assets/img/icons/double-arrow.png" alt="#" /></a>
-                        </div>
-                    </div>
                 </ul>
             </div>
         </div>

@@ -1,29 +1,42 @@
+<!-- Page top section -->
+<section class="page-top-section">
+  <div class="page-info">
+    <section class="your-games">
+      <h2 *ngIf="!isEmpty">Your Games</h2>
+      <h2 *ngIf="isEmpty">You don't have games yet!</h2>
+    </section>
+    <div class="site-breadcrumb">
+      <a href="/" routerLink="/">Home</a> /
+      <span>Dashboard</span>
+    </div>
+  </div>
+</section>
+<!-- Page top end-->
+
 <section id="dashboard">
   <div class="row">
     <div class="col-12">
       <div class="text-white">
-        <section class="your-games">
-          <h2 *ngIf="!isEmpty">Your Games</h2>
-          <h2 *ngIf="isEmpty">You don't have games yet!</h2>
-        </section>
+
 
         <div class="p-0">
           <table class="text-white text-nowrap" cellpadding="0" cellspacing="0">
             <thead>
               <tr>
-                <th>Image</th>
-                <th>Title</th>
+                <th class="text-center">Image</th>
+                <th class="title-margin">Title</th>
                 <th>Genres</th>
                 <th>Rating</th>
                 <th>Price</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let game of gameList; let i = index" class="game">
-                <td>
+                <td class="image-col">
                   <img src={{game.imageUrl}} alt="game-image">
                 </td>
-                <td>
+                <td class="title-margin">
                   {{game.title}}
                 </td>
                 <td>
@@ -36,7 +49,11 @@
                   {{game.price}}
                 </td>
                 <td>
-                  <a class="details-btn" routerLink="/game/detail/{{game._id}}">Details</a>
+                  <a class="details-btn dtls" routerLink="/game/detail/{{game._id}}">Details</a>
+                </td>
+                <td>
+                  <!-- <a class="details-btn" routerLink="/game/delete/{{game._id}}">Delete</a> -->
+                  <button type="button" class="details-btn del" (click)="deleteGame(game._id)">Delete</button>
                 </td>
               </tr>
             </tbody>

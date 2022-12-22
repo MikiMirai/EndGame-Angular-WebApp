@@ -1,40 +1,40 @@
 <!-- Page top section -->
 <section class="page-top-section">
-  <div class="page-info">
-      <h2>Games</h2>
-      <div class="site-breadcrumb">
-          <a href="/" routerLink="/">Home</a>  /
-          <span>Games</span>
-      </div>
-  </div>
+    <div class="page-info">
+        <h2>Game Details</h2>
+        <div class="site-breadcrumb">
+            <a href="/" routerLink="/">Home</a> /
+            <span>Game Details</span>
+        </div>
+    </div>
 </section>
 <!-- Page top end-->
 
 <!-- Games section -->
 <section class="games-single-page">
-  <div class="container">
-      <div class="game-single-preview">
-          <img src="{{game.imageUrl}}" alt="" style="max-width: 400px;">
-      </div>
-      <div class="row">
-          <div class="col-xl-9 col-lg-8 col-md-7 game-single-content">
-              <h2 class="gs-title">{{game.title}}</h2>
-              <h4>Description</h4>
-              <p>{{game.description}}</p>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-5 sidebar game-page-sideber">
-              <div id="stickySidebar">
-                  <div class="widget-item">
-                      <div class="rating-widget">
-                          <h4 class="widget-title">Rating</h4>
-                          <div class="rating">
-                              <h5>{{game.rating}} / 10</h5>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="container">
+        <div class="game-single-preview">
+            <img src="{{game.imageUrl}}" alt="" style="max-width: 400px;">
+        </div>
+        <div class="row">
+            <div class="col-xl-9 col-lg-8 col-md-7 game-single-content">
+                <h2 class="gs-title">{{game.title}}</h2>
+                <h4>Description</h4>
+                <p>{{game.description}}</p>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-5 sidebar game-page-sideber">
+                <div id="stickySidebar">
+                    <div class="widget-item">
+                        <div class="rating-widget">
+                            <h4 class="widget-title">Rating</h4>
+                            <div class="rating">
+                                <h5>{{game.rating}} / 10</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Games end-->
