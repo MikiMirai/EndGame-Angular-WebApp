@@ -16,7 +16,7 @@ Gaming site where people can add their own games.
 ## Features
 - Public Area
 - Login/Register
-- Create a game
+- Create/Delete a game
 - View your games
 
 ## Prerequisites
