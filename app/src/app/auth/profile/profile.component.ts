@@ -25,7 +25,7 @@ export class ProfileComponent implements OnInit {
   deleteGame(gameId: string) {
     this.gameService.deleteGame(gameId).subscribe({
       next: () => {
-        this.router.navigate(['/auth/profile'])
+        this.router.navigate(['/'])
       },
       error: (err) => { console.error(err) }
     })
