@@ -20,7 +20,7 @@ Gaming site where people can add their own games.
 - View your games
 
 ## Prerequisites
-- ! Install NodeJS from their site.
+- ! Install NodeJS from their site
 - Clone the repo, preferably with VS Code
 - Open a terminal and type 'cd app' then 'npm i'
 - Then open another one and do 'cd rest-api' then 'npm i' again in here
@@ -29,4 +29,4 @@ Gaming site where people can add their own games.
 - Open 2 terminals
 - 'cd app' then 'ng s' and
 - 'cd rest-api' then 'node index.js'
-- Open http://localhost:4200/ in your browser.
+- Open http://localhost:4200/ in your browser
